@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--适配器模式-->
+<config>
+    <className>OperationAdapter</className>
+
+    <database>JdbcDatabase</database>
+    <file>TxtFile</file>
+    <database>OracleDatabase</database>
+    <file>XmlFile</file>
+</config>
+
+

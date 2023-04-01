@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.xingy.designPattern</groupId>
+	<artifactId>xingy-designPattern</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0.0</version>
+	<name>xingy-designPattern</name>
+	<description>Demo project for Spring Boot</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.4.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<!-- https://mvnrepository.com/artifact/org.ow2.asm/asm -->
+	<dependencies>
+		<dependency>
+			<groupId>org.ow2.asm</groupId>
+			<artifactId>asm</artifactId>
+			<version>5.0.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/cglib/cglib -->
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>maven-central</id>
+			<name>maven-central</name>
+			<url>http://47.98.171.184:8081/repository/maven-central/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<!--正式版本仓库-->
+		<!--<repository>-->
+			<!--<id>nexus</id>-->
+			<!--<name>Nexus Snapshot</name>-->
+			<!--<url>http://47.98.171.184:8081/repository/maven-releases/</url>-->
+		<!--</repository>-->
+		<!--快照版本仓库-->
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Nexus Snapshot</name>
+			<url>http://47.98.171.184:8081/repository/maven-snapshots/</url>
+		</snapshotRepository>
+		<site>
+			<id>nexus</id>
+			<name>Nexus Sites</name>
+			<url>dav:http://47.98.171.184:8081/repository/maven-snapshots/</url>
+		</site>
+	</distributionManagement>
+</project>
